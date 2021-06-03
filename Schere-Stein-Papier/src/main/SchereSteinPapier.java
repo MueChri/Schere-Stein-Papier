@@ -3,7 +3,7 @@ package main;
 
 import view.FrameView;
 
-public class MainProject {
+public class SchereSteinPapier {
 
 	public static void main(String[] args) {
 
