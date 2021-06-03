@@ -26,9 +26,9 @@ public class WelcomePanelView extends JPanel {
 	protected void paintComponent (Graphics g ) {
 		super.paintComponent(g);
 	
-		g.drawImage(new ImageIcon("C:\\Users\\araml\\eclipse-workspace\\Semester2\\src\\backgroundProject.png").getImage(),0,0,this);
-		g.drawImage(new ImageIcon("C:\\Users\\araml\\eclipse-workspace\\Semester2\\src\\Welcometransparent.png").getImage(),-11,119,404,262,this);
-		g.drawImage(new ImageIcon("C:\\Users\\araml\\eclipse-workspace\\Semester2\\src\\closeButton.png").getImage(),340,0,28,28,this);
+		g.drawImage(new ImageIcon("..\\src\\images\\backgroundProject.png").getImage(),0,0,this);
+		g.drawImage(new ImageIcon("..\\src\\images\\Welcometransparent.png").getImage(),-11,119,404,262,this);
+		g.drawImage(new ImageIcon("..\\src\\images\\closeButton.png").getImage(),340,0,28,28,this);
 	
 
 }
