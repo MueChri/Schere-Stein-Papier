@@ -4,6 +4,7 @@ import java.awt.Dimension;
 
 import javax.swing.JPanel;
 
+import common.CloseButton;
 import main.MainController;
 import main.enums.Views;
 
@@ -18,7 +19,9 @@ public abstract class View extends JPanel {
 		this.main = main;
 		this.id = id;
 		this.controller = controller;
+		this.setLayout(null);
 		this.setPreferredSize(new Dimension(370, 500));
+		this.add(new CloseButton());
 	}
 	
 }

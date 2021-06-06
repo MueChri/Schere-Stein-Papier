@@ -6,7 +6,7 @@ import welcome.WelcomeView;
 
 public class MainView extends JFrame {
 	
-	MainController controller;
+	public final MainController controller;
 		
 	public MainView() {
 		

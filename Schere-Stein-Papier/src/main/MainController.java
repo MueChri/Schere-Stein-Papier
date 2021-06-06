@@ -37,6 +37,10 @@ public class MainController {
 		this.setView(this.getViewById(id));
 	}
 	
+	public void exit() {
+		System.exit(0);
+	}
+	
 	private void setView(View view) {
 		if (this.currentView != null) {
 			this.frame.removeKeyListener(this.currentView.controller);
