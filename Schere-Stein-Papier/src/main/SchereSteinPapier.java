@@ -1,15 +1,11 @@
 package main;
 
-
-import view.FrameView;
-
 public class SchereSteinPapier {
 
 	public static void main(String[] args) {
 
-
-		new FrameView();
-		
+		// just start the main view...
+		new MainView();
 
 	}
 
