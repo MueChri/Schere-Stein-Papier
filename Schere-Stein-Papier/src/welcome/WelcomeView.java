@@ -20,7 +20,6 @@ public class WelcomeView extends View {
 	
 	protected void paintComponent(Graphics graphics) {
 		super.paintComponent(graphics);
-		graphics.drawImage(new ImageIcon("images/backgroundProject.png").getImage(),0,0,this);
 		graphics.drawImage(new ImageIcon("images/Welcometransparent.png").getImage(),-11,119,404,262,this);
 	}
 
