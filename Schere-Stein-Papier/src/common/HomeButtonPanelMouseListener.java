@@ -6,12 +6,13 @@ import java.awt.event.MouseListener;
 import javax.swing.SwingUtilities;
 
 import main.MainFrame;
+import main.ViewPanelRegistryItems;
 
-public class CloseButtonListener implements MouseListener {
+public class HomeButtonPanelMouseListener implements MouseListener {
 
 	@Override
 	public void mouseClicked(MouseEvent event) {
-		System.exit(0);		
+		((MainFrame) SwingUtilities.windowForComponent(event.getComponent())).viewPanelRegistry.setCurrentView(ViewPanelRegistryItems.MENU);
 	}
 
 	@Override

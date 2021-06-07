@@ -38,9 +38,9 @@ public class ViewPanelRegistry {
 	
 	private void paintCurrentView() {
 		this.mainFrame.getContentPane().removeAll();   
+		this.mainFrame.getContentPane().add(this.currentView.panel);
 		this.mainFrame.revalidate();
 		this.currentView.panel.repaint();
-		this.mainFrame.getContentPane().add(this.currentView.panel);
 		this.mainFrame.pack();
 	}
 	

@@ -1,11 +1,12 @@
 package highscores;
 
+import common.HomeButtonPanel;
 import main.ViewPanel;
 
 public class HighscoresViewPanel extends ViewPanel {
 
 	public HighscoresViewPanel() {
-		super();
+		this.add(new HomeButtonPanel());
 	}
 	
 }

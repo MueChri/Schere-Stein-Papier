@@ -1,10 +1,11 @@
 package game;
 
+import common.HomeButtonPanel;
 import main.ViewPanel;
 
 public class GameViewPanel extends ViewPanel {
 
 	public GameViewPanel() {
-		super();
+		this.add(new HomeButtonPanel());
 	}
 }

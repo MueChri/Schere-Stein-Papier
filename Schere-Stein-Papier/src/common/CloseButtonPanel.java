@@ -5,10 +5,10 @@ import java.awt.Graphics;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
-public class CloseButton extends JPanel {
+public class CloseButtonPanel extends JPanel {
 
-	public CloseButton() {
-		this.addMouseListener(new CloseButtonListener());
+	public CloseButtonPanel() {
+		this.addMouseListener(new CloseButtonPanelMouseListener());
 		this.setSize(28, 28);
 		this.setLocation(340, 0);
 		this.setOpaque(false);
@@ -17,7 +17,7 @@ public class CloseButton extends JPanel {
 	protected void paintComponent(Graphics graphics) {
 		super.paintComponent(graphics);
 		ImageIcon icon = new ImageIcon("images/closeButton.png");
-		graphics.drawImage(icon.getImage(), 0, 0, 28, 28, this);
+		graphics.drawImage(icon.getImage(), 0, 0, this);
 	}
 		
 }

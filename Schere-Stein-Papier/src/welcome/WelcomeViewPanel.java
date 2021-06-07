@@ -9,7 +9,6 @@ import main.ViewPanel;
 public class WelcomeViewPanel extends ViewPanel {
 
 	public WelcomeViewPanel() {
-		super();
 	}
 	
 	protected void paintComponent(Graphics graphics) {
