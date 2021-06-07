@@ -4,14 +4,12 @@ import java.awt.Graphics;
 
 import javax.swing.ImageIcon;
 
-import main.MainController;
-import main.abstracts.View;
-import main.enums.Views;
+import main.ViewPanel;
 
-public class MenuView extends View {
+public class MenuViewPanel extends ViewPanel {
 		
-	public MenuView(Views id, MainController main) {
-		super(id, main, new MenuController(id, main));
+	public MenuViewPanel() {
+		super();
 	}
 	
 	protected void paintComponent(Graphics graphics) {

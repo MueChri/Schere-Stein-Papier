@@ -5,13 +5,13 @@ import java.awt.event.MouseListener;
 
 import javax.swing.SwingUtilities;
 
-import main.MainView;
+import main.MainFrame;
 
 public class CloseButtonListener implements MouseListener {
 
 	@Override
 	public void mouseClicked(MouseEvent event) {
-		((MainView) SwingUtilities.windowForComponent(event.getComponent())).controller.exit();		
+		System.exit(0);		
 	}
 
 	@Override
