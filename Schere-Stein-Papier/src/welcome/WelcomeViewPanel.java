@@ -13,7 +13,7 @@ public class WelcomeViewPanel extends ViewPanel {
 
 	public WelcomeViewPanel() {
 
-		JLabel welcomeLabel = new CenteredText("ROCK PAPER SCISSOR", 29, Font.BOLD);
+		JLabel welcomeLabel = new CenteredText("ROCK PAPER SCISSORS", 29, Font.BOLD);
 		welcomeLabel.setBounds(4, 39, 373, 36);
 		this.add(welcomeLabel);
 
