@@ -15,10 +15,12 @@ public abstract class ViewPanel extends JPanel {
 		this.setLayout(null);
 		this.setPreferredSize(new Dimension(370, 500));
 		this.add(new CloseButtonPanel());
+		this.setFocusable(true);		
 	}
 	
 	protected void paintComponent(Graphics graphics) {
 		super.paintComponent(graphics);
+		this.requestFocusInWindow();
 		graphics.drawImage(new ImageIcon("images/backgroundProject.png").getImage(), 0, 0, this);
 	}
 

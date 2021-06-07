@@ -1,10 +1,9 @@
 package menu;
 
 import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
-import main.ViewPanelKeyListener;
-
-public class MenuViewPanelKeyListener extends ViewPanelKeyListener {
+public class MenuViewPanelKeyListener implements KeyListener {
 	
 	public MenuViewPanelKeyListener() {
 		super();
@@ -16,6 +15,14 @@ public class MenuViewPanelKeyListener extends ViewPanelKeyListener {
 		if (key == KeyEvent.VK_ESCAPE) {
 			System.exit(0);
 		}
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
 	}
 	
 }

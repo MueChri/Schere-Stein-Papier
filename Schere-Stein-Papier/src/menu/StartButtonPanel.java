@@ -8,7 +8,6 @@ import javax.swing.JPanel;
 public class StartButtonPanel extends JPanel {
 
 	public StartButtonPanel() {
-		super();
 		this.setSize(270, 272);
 		this.setLocation(48, 228);
 		this.setOpaque(false);

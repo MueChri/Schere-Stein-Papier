@@ -1,23 +1,32 @@
 package welcome;
 
 import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+import javax.swing.SwingUtilities;
 
 import main.MainFrame;
-import main.ViewPanelKeyListener;
 import main.ViewPanelRegistryItems;
 
-public class WelcomeViewPanelKeyListener extends ViewPanelKeyListener {
+public class WelcomeViewPanelKeyListener implements KeyListener {
 	
 	public WelcomeViewPanelKeyListener() {
-		super();
 	}
 	
 	@Override
 	public void keyPressed(KeyEvent event) {
 		int key = event.getKeyCode();
 		if (key == KeyEvent.VK_ENTER) {
-			((MainFrame) event.getComponent()).viewPanelRegistry.setCurrentView(ViewPanelRegistryItems.MENU);
+			((MainFrame) SwingUtilities.windowForComponent(event.getComponent())).viewPanelRegistry.setCurrentView(ViewPanelRegistryItems.MENU);
 		}
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
 	}
 	
 }
