@@ -8,7 +8,7 @@ import common.CenteredText;
 import main.ViewPanel;
 
 public class MenuViewPanel extends ViewPanel {
-		
+	
 	public MenuViewPanel() {
 		this.add(new StartButtonPanel());
 		this.add(new HighscoresButtonPanel());

@@ -1,0 +1,6 @@
+WARNING - 19:25:38: Creating types 
+WARNING - 19:25:38: Initializing types
+WARNING - 19:25:40: Generic post-process : Creating usages and associations
+WARNING - 19:25:40: Generic post-process : Creating activities
+WARNING - 19:25:40: Saving uml file /resource/Schere-Stein-Papier/Schere-Stein-Papier.uml
+WARNING - 19:25:40: Uml file /resource/Schere-Stein-Papier/Schere-Stein-Papier.uml saved

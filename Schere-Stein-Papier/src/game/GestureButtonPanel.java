@@ -11,12 +11,12 @@ import common.CenteredText;
 
 public class GestureButtonPanel extends JPanel {
 	
-	private final GestureTypes type;
+	private final Gesture type;
 	private final String arrow;
 	private final String image;
 	private final int xPosition;
 	
-	public GestureButtonPanel(GestureTypes type) {
+	public GestureButtonPanel(Gesture type) {
 		this.type = type;
 		this.arrow = this.getGestureArrow(type);
 		this.image = this.getGestureImage(type);
@@ -38,7 +38,7 @@ public class GestureButtonPanel extends JPanel {
 	}
 	
 
-	private String getGestureArrow(GestureTypes type) {
+	private String getGestureArrow(Gesture type) {
 		switch(type) {
 			case ROCK:
 				return "←";
@@ -50,7 +50,7 @@ public class GestureButtonPanel extends JPanel {
 		}
 	}
 	
-	private String getGestureImage(GestureTypes type) {
+	private String getGestureImage(Gesture type) {
 		switch(type) {
 		case ROCK:
 			return "images/RockGesture.png";
@@ -62,7 +62,7 @@ public class GestureButtonPanel extends JPanel {
 		}
 	}
 	
-	private int getXPosition(GestureTypes type) {
+	private int getXPosition(Gesture type) {
 		switch (type) {
 		case ROCK:
 			return 30;

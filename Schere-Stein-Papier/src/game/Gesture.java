@@ -1,6 +1,6 @@
 package game;
 
-public enum GestureTypes {
+public enum Gesture {
 	ROCK,
 	PAPER,
 	SCISSORS

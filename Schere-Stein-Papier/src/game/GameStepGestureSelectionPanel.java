@@ -13,13 +13,12 @@ public class GameStepGestureSelectionPanel extends JPanel {
 	public GameStepGestureSelectionPanel() {
 		
 		this.setLayout(null);
-		//this.setPreferredSize(new Dimension(370, 440));
 		this.setBounds(0, 30, 370, 400);
 		this.setOpaque(false);
 		
-		this.add(new GestureButtonPanel(GestureTypes.ROCK));
-		this.add(new GestureButtonPanel(GestureTypes.PAPER));
-		this.add(new GestureButtonPanel(GestureTypes.SCISSORS));
+		this.add(new GestureButtonPanel(Gesture.ROCK));
+		this.add(new GestureButtonPanel(Gesture.PAPER));
+		this.add(new GestureButtonPanel(Gesture.SCISSORS));
 
 		JLabel pickGesture = new CenteredText("PICK GESTURE", 30, Font.BOLD);
 		pickGesture.setBounds(75, 31, 235, 36);

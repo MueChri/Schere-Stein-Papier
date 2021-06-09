@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_ij0msMh-Eeup85LGMf4FVA" name="Schere-Stein-Papier">
+  <elementImport xmi:id="_ionnIMh-Eeup85LGMf4FVA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_ionnIch-Eeup85LGMf4FVA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+  </elementImport>
+  <elementImport xmi:id="_ionnIsh-Eeup85LGMf4FVA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+  </elementImport>
+  <elementImport xmi:id="_ionnI8h-Eeup85LGMf4FVA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+  </elementImport>
+  <elementImport xmi:id="_ionnJMh-Eeup85LGMf4FVA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+  </elementImport>
+  <elementImport xmi:id="_ionnJch-Eeup85LGMf4FVA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+  </elementImport>
+  <elementImport xmi:id="_iooOMMh-Eeup85LGMf4FVA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+  </elementImport>
+  <elementImport xmi:id="_iooOMch-Eeup85LGMf4FVA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+  </elementImport>
+  <elementImport xmi:id="_iooOMsh-Eeup85LGMf4FVA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_iooOM8h-Eeup85LGMf4FVA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <elementImport xmi:id="_iooONMh-Eeup85LGMf4FVA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_iooONch-Eeup85LGMf4FVA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <packageImport xmi:id="_iofrUMh-Eeup85LGMf4FVA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packageImport xmi:id="_ioiuoMh-Eeup85LGMf4FVA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_ior4kMh-Eeup85LGMf4FVA" name="common">
+    <packagedElement xmi:type="uml:Class" xmi:id="_ipr-IMh-Eeup85LGMf4FVA" name="CloseButtonPanel" visibility="public">
+      <elementImport xmi:id="_iret4Mh-Eeup85LGMf4FVA" importedElement="_ireG0sh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_iret4sh-Eeup85LGMf4FVA" importedElement="_iret4ch-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_iret48h-Eeup85LGMf4FVA" importedElement="_ircRosh-Eeup85LGMf4FVA" visibility="private"/>
+      <generalization xmi:id="_ircRo8h-Eeup85LGMf4FVA" general="_ircRosh-Eeup85LGMf4FVA"/>
+      <ownedOperation xmi:id="_ir92EMh-Eeup85LGMf4FVA" name="CloseButtonPanel" visibility="public"/>
+      <ownedOperation xmi:id="_itdq4Mh-Eeup85LGMf4FVA" name="paintComponent" visibility="protected">
+        <eAnnotations xmi:id="_itdq4ch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_itdq4sh-Eeup85LGMf4FVA" key="documentation" value=" Calls the UI delegate's paint method, if the UI delegate&#xD;&#xA; is non-&lt;code>null&lt;/code>.  We pass the delegate a copy of the&#xD;&#xA; &lt;code>Graphics&lt;/code> object to protect the rest of the&#xD;&#xA; paint code from irrevocable changes&#xD;&#xA; (for example, &lt;code>Graphics.translate&lt;/code>).&#xD;&#xA; &lt;p>&#xD;&#xA; If you override this in a subclass you should not make permanent&#xD;&#xA; changes to the passed in &lt;code>Graphics&lt;/code>. For example, you&#xD;&#xA; should not alter the clip &lt;code>Rectangle&lt;/code> or modify the&#xD;&#xA; transform. If you need to do these operations you may find it&#xD;&#xA; easier to create a new &lt;code>Graphics&lt;/code> from the passed in&#xD;&#xA; &lt;code>Graphics&lt;/code> and manipulate it. Further, if you do not&#xD;&#xA; invoke super's implementation you must honor the opaque property, that is&#xD;&#xA; if this component is opaque, you must completely fill in the background&#xD;&#xA; in an opaque color. If you do not honor the opaque property you&#xD;&#xA; will likely see visual artifacts.&#xD;&#xA; &lt;p>&#xD;&#xA; The passed in &lt;code>Graphics&lt;/code> object might&#xD;&#xA; have a transform other than the identify transform&#xD;&#xA; installed on it.  In this case, you might get&#xD;&#xA; unexpected results if you cumulatively apply&#xD;&#xA; another transform.&#xD;&#xA; @param g the &lt;code>Graphics&lt;/code> object to protect&#xD;&#xA; @see #paint&#xD;&#xA; @see ComponentUI&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_itdq48h-Eeup85LGMf4FVA" name="graphics" type="_ireG0sh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ipwPkMh-Eeup85LGMf4FVA" name="HomeButtonPanel" visibility="public">
+      <elementImport xmi:id="_it5vwMh-Eeup85LGMf4FVA" importedElement="_ireG0sh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_it5vwch-Eeup85LGMf4FVA" importedElement="_iret4ch-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_it5vwsh-Eeup85LGMf4FVA" importedElement="_ircRosh-Eeup85LGMf4FVA" visibility="private"/>
+      <generalization xmi:id="_it5IsMh-Eeup85LGMf4FVA" general="_ircRosh-Eeup85LGMf4FVA"/>
+      <ownedOperation xmi:id="_it_2YMh-Eeup85LGMf4FVA" name="HomeButtonPanel" visibility="public"/>
+      <ownedOperation xmi:id="_iuYQ4Mh-Eeup85LGMf4FVA" name="paintComponent" visibility="protected">
+        <eAnnotations xmi:id="_iuYQ4ch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_iuYQ4sh-Eeup85LGMf4FVA" key="documentation" value=" Calls the UI delegate's paint method, if the UI delegate&#xD;&#xA; is non-&lt;code>null&lt;/code>.  We pass the delegate a copy of the&#xD;&#xA; &lt;code>Graphics&lt;/code> object to protect the rest of the&#xD;&#xA; paint code from irrevocable changes&#xD;&#xA; (for example, &lt;code>Graphics.translate&lt;/code>).&#xD;&#xA; &lt;p>&#xD;&#xA; If you override this in a subclass you should not make permanent&#xD;&#xA; changes to the passed in &lt;code>Graphics&lt;/code>. For example, you&#xD;&#xA; should not alter the clip &lt;code>Rectangle&lt;/code> or modify the&#xD;&#xA; transform. If you need to do these operations you may find it&#xD;&#xA; easier to create a new &lt;code>Graphics&lt;/code> from the passed in&#xD;&#xA; &lt;code>Graphics&lt;/code> and manipulate it. Further, if you do not&#xD;&#xA; invoke super's implementation you must honor the opaque property, that is&#xD;&#xA; if this component is opaque, you must completely fill in the background&#xD;&#xA; in an opaque color. If you do not honor the opaque property you&#xD;&#xA; will likely see visual artifacts.&#xD;&#xA; &lt;p>&#xD;&#xA; The passed in &lt;code>Graphics&lt;/code> object might&#xD;&#xA; have a transform other than the identify transform&#xD;&#xA; installed on it.  In this case, you might get&#xD;&#xA; unexpected results if you cumulatively apply&#xD;&#xA; another transform.&#xD;&#xA; @param g the &lt;code>Graphics&lt;/code> object to protect&#xD;&#xA; @see #paint&#xD;&#xA; @see ComponentUI&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_iuYQ48h-Eeup85LGMf4FVA" name="graphics" type="_ireG0sh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ip2WMMh-Eeup85LGMf4FVA" name="HomeButtonPanelMouseListener" visibility="public">
+      <elementImport xmi:id="_iuuPIMh-Eeup85LGMf4FVA" importedElement="_iutoEsh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_iuuPIch-Eeup85LGMf4FVA" importedElement="_iutoEch-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_iuuPI8h-Eeup85LGMf4FVA" importedElement="_iuuPIsh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_iuuPJMh-Eeup85LGMf4FVA" importedElement="_iqi5wMh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_iuu2MMh-Eeup85LGMf4FVA" importedElement="_iqaW4Mh-Eeup85LGMf4FVA" visibility="private"/>
+      <ownedOperation xmi:id="_ivKUAMh-Eeup85LGMf4FVA" name="mouseClicked" visibility="public">
+        <eAnnotations xmi:id="_ivKUAch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_ivKUAsh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when the mouse button has been clicked (pressed&#xD;&#xA; and released) on a component.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_ivKUA8h-Eeup85LGMf4FVA" name="event" type="_iutoEsh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_ivj8oMh-Eeup85LGMf4FVA" name="mousePressed" visibility="public">
+        <eAnnotations xmi:id="_ivj8och-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_ivj8osh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when a mouse button has been pressed on a component.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_ivj8o8h-Eeup85LGMf4FVA" name="e" type="_iutoEsh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_iv8XIMh-Eeup85LGMf4FVA" name="mouseReleased" visibility="public">
+        <eAnnotations xmi:id="_iv8XIch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_iv8XIsh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when a mouse button has been released on a component.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_iv8XI8h-Eeup85LGMf4FVA" name="e" type="_iutoEsh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_iwVYsMh-Eeup85LGMf4FVA" name="mouseEntered" visibility="public">
+        <eAnnotations xmi:id="_iwVYsch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_iwVYssh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when the mouse enters a component.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_iwVYs8h-Eeup85LGMf4FVA" name="e" type="_iutoEsh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_iwwPcMh-Eeup85LGMf4FVA" name="mouseExited" visibility="public">
+        <eAnnotations xmi:id="_iwwPcch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_iwwPcsh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when the mouse exits a component.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_iwwPc8h-Eeup85LGMf4FVA" name="e" type="_iutoEsh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ip29QMh-Eeup85LGMf4FVA" name="CenteredText" visibility="public">
+      <elementImport xmi:id="_iw8cssh-Eeup85LGMf4FVA" importedElement="_iw8csch-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_iw9Dwch-Eeup85LGMf4FVA" importedElement="_iw9DwMh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_iw9Dwsh-Eeup85LGMf4FVA" importedElement="_iw71oMh-Eeup85LGMf4FVA" visibility="private"/>
+      <generalization xmi:id="_iw8csMh-Eeup85LGMf4FVA" general="_iw71oMh-Eeup85LGMf4FVA"/>
+      <ownedOperation xmi:id="_ixE_kMh-Eeup85LGMf4FVA" name="CenteredText" visibility="public">
+        <ownedParameter xmi:id="_ixE_kch-Eeup85LGMf4FVA" name="text">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_ixE_ksh-Eeup85LGMf4FVA" name="size">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_ixE_k8h-Eeup85LGMf4FVA" name="weight">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ip6noMh-Eeup85LGMf4FVA" name="CloseButtonPanelMouseListener" visibility="public">
+      <elementImport xmi:id="_ixUQIMh-Eeup85LGMf4FVA" importedElement="_iutoEsh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_ixU3MMh-Eeup85LGMf4FVA" importedElement="_iutoEch-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_ixU3Mch-Eeup85LGMf4FVA" importedElement="_iuuPIsh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_ixU3Msh-Eeup85LGMf4FVA" importedElement="_iqi5wMh-Eeup85LGMf4FVA" visibility="private"/>
+      <ownedOperation xmi:id="_ixpAQMh-Eeup85LGMf4FVA" name="mouseClicked" visibility="public">
+        <eAnnotations xmi:id="_ixpAQch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_ixpAQsh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when the mouse button has been clicked (pressed&#xD;&#xA; and released) on a component.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_ixpAQ8h-Eeup85LGMf4FVA" name="event" type="_iutoEsh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_iyBawMh-Eeup85LGMf4FVA" name="mousePressed" visibility="public">
+        <eAnnotations xmi:id="_iyBawch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_iyBawsh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when a mouse button has been pressed on a component.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_iyBaw8h-Eeup85LGMf4FVA" name="e" type="_iutoEsh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_iyZOMMh-Eeup85LGMf4FVA" name="mouseReleased" visibility="public">
+        <eAnnotations xmi:id="_iyZOMch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_iyZOMsh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when a mouse button has been released on a component.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_iyZOM8h-Eeup85LGMf4FVA" name="e" type="_iutoEsh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_iyvzgMh-Eeup85LGMf4FVA" name="mouseEntered" visibility="public">
+        <eAnnotations xmi:id="_iyvzgch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_iyvzgsh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when the mouse enters a component.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_iyvzg8h-Eeup85LGMf4FVA" name="e" type="_iutoEsh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_izFxwMh-Eeup85LGMf4FVA" name="mouseExited" visibility="public">
+        <eAnnotations xmi:id="_izFxwch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_izFxwsh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when the mouse exits a component.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_izFxw8h-Eeup85LGMf4FVA" name="e" type="_iutoEsh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jArh0Mh-Eeup85LGMf4FVA" name="common_awt" client="_ior4kMh-Eeup85LGMf4FVA" supplier="_ireG0ch-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jArh0ch-Eeup85LGMf4FVA" name="common_swing" client="_ior4kMh-Eeup85LGMf4FVA" supplier="_ircRoch-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jArh0sh-Eeup85LGMf4FVA" name="common_event" client="_ior4kMh-Eeup85LGMf4FVA" supplier="_iutoEMh-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jArh08h-Eeup85LGMf4FVA" name="common_main" client="_ior4kMh-Eeup85LGMf4FVA" supplier="_iqWFcMh-Eeup85LGMf4FVA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_ip7OsMh-Eeup85LGMf4FVA" name="game">
+    <packagedElement xmi:type="uml:Class" xmi:id="_iqAuQMh-Eeup85LGMf4FVA" name="GameStepGestureSelectionPanelKeyListener" visibility="public">
+      <elementImport xmi:id="_izQJ0ch-Eeup85LGMf4FVA" importedElement="_izQJ0Mh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_izQJ0sh-Eeup85LGMf4FVA" importedElement="_izPiwMh-Eeup85LGMf4FVA" visibility="private"/>
+      <ownedOperation xmi:id="_izrnoMh-Eeup85LGMf4FVA" name="keyPressed" visibility="public">
+        <eAnnotations xmi:id="_izrnoch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_izrnosh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when a key has been pressed.&#xD;&#xA; See the class description for {@link KeyEvent} for a definition of&#xD;&#xA; a key pressed event.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_izrno8h-Eeup85LGMf4FVA" name="event" type="_izQJ0Mh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_iz304Mh-Eeup85LGMf4FVA" name="keyTyped" visibility="public">
+        <eAnnotations xmi:id="_iz304ch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_iz304sh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when a key has been typed.&#xD;&#xA; See the class description for {@link KeyEvent} for a definition of&#xD;&#xA; a key typed event.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_iz3048h-Eeup85LGMf4FVA" name="e" type="_izQJ0Mh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_i0C0AMh-Eeup85LGMf4FVA" name="keyReleased" visibility="public">
+        <eAnnotations xmi:id="_i0C0Ach-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_i0C0Ash-Eeup85LGMf4FVA" key="documentation" value=" Invoked when a key has been released.&#xD;&#xA; See the class description for {@link KeyEvent} for a definition of&#xD;&#xA; a key released event.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_i0C0A8h-Eeup85LGMf4FVA" name="e" type="_izQJ0Mh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_iqG04Mh-Eeup85LGMf4FVA" name="GameState" visibility="public">
+      <ownedAttribute xmi:id="_i0Kv0Mh-Eeup85LGMf4FVA" name="pickedGesturePlayer" visibility="private" type="_iqPXwMh-Eeup85LGMf4FVA"/>
+      <ownedAttribute xmi:id="_i0MlAMh-Eeup85LGMf4FVA" name="pickedGestureComputer" visibility="private" type="_iqPXwMh-Eeup85LGMf4FVA"/>
+      <ownedOperation xmi:id="_i0PBQMh-Eeup85LGMf4FVA" name="GameState" visibility="public"/>
+      <ownedOperation xmi:id="_i0VH4Mh-Eeup85LGMf4FVA" name="resetRoundState" visibility="public"/>
+      <ownedOperation xmi:id="_i0eR0Mh-Eeup85LGMf4FVA" name="pickGesturePlayer" visibility="public">
+        <ownedParameter xmi:id="_i0eR0ch-Eeup85LGMf4FVA" name="type" type="_iqPXwMh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_iqJ4MMh-Eeup85LGMf4FVA" name="GameViewPanel" visibility="public">
+      <elementImport xmi:id="_i0nbwMh-Eeup85LGMf4FVA" importedElement="_ipwPkMh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i0nbwch-Eeup85LGMf4FVA" importedElement="_iqczIMh-Eeup85LGMf4FVA" visibility="private"/>
+      <generalization xmi:id="_i0m0sMh-Eeup85LGMf4FVA" general="_iqczIMh-Eeup85LGMf4FVA"/>
+      <ownedAttribute xmi:id="_i0rGIMh-Eeup85LGMf4FVA" name="gameState" visibility="public" isLeaf="true" type="_iqG04Mh-Eeup85LGMf4FVA" association="_jAsv8Mh-Eeup85LGMf4FVA">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_i0zpAMh-Eeup85LGMf4FVA" name="" type="_iqG04Mh-Eeup85LGMf4FVA" value="new GameState()"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_i05IkMh-Eeup85LGMf4FVA" name="GameViewPanel" visibility="public"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_iqM7gMh-Eeup85LGMf4FVA" name="GameStepGestureSelectionPanel" visibility="public">
+      <elementImport xmi:id="_i1Gj8ch-Eeup85LGMf4FVA" importedElement="_i1Gj8Mh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i1HLAMh-Eeup85LGMf4FVA" importedElement="_iw9DwMh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i1HLAch-Eeup85LGMf4FVA" importedElement="_iw71oMh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i1HLAsh-Eeup85LGMf4FVA" importedElement="_ircRosh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i1HLA8h-Eeup85LGMf4FVA" importedElement="_ip29QMh-Eeup85LGMf4FVA" visibility="private"/>
+      <generalization xmi:id="_i1F84Mh-Eeup85LGMf4FVA" general="_ircRosh-Eeup85LGMf4FVA"/>
+      <ownedOperation xmi:id="_i1MDgMh-Eeup85LGMf4FVA" name="GameStepGestureSelectionPanel" visibility="public"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_iqPXwMh-Eeup85LGMf4FVA" name="GestureTypes" visibility="public">
+      <ownedLiteral xmi:id="_i1TYQMh-Eeup85LGMf4FVA" name="ROCK">
+        <specification xmi:type="uml:LiteralInteger" xmi:id="_i1TYQch-Eeup85LGMf4FVA"/>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="_i1TYQsh-Eeup85LGMf4FVA" name="PAPER">
+        <specification xmi:type="uml:LiteralInteger" xmi:id="_i1TYQ8h-Eeup85LGMf4FVA"/>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="_i1TYRMh-Eeup85LGMf4FVA" name="SCISSORS">
+        <specification xmi:type="uml:LiteralInteger" xmi:id="_i1T_UMh-Eeup85LGMf4FVA"/>
+      </ownedLiteral>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_iqTCIMh-Eeup85LGMf4FVA" name="GestureButtonPanel" visibility="public">
+      <elementImport xmi:id="_i1b7Ich-Eeup85LGMf4FVA" importedElement="_iw9DwMh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i1ciMMh-Eeup85LGMf4FVA" importedElement="_ireG0sh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i1ciMch-Eeup85LGMf4FVA" importedElement="_iret4ch-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i1ciMsh-Eeup85LGMf4FVA" importedElement="_iw71oMh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i1ciM8h-Eeup85LGMf4FVA" importedElement="_ircRosh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i1ciNMh-Eeup85LGMf4FVA" importedElement="_ip29QMh-Eeup85LGMf4FVA" visibility="private"/>
+      <generalization xmi:id="_i1b7IMh-Eeup85LGMf4FVA" general="_ircRosh-Eeup85LGMf4FVA"/>
+      <ownedAttribute xmi:id="_i1gzoMh-Eeup85LGMf4FVA" name="type" visibility="private" isLeaf="true" type="_iqPXwMh-Eeup85LGMf4FVA"/>
+      <ownedAttribute xmi:id="_i1hasMh-Eeup85LGMf4FVA" name="arrow" visibility="private" isLeaf="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_i1hasch-Eeup85LGMf4FVA" name="image" visibility="private" isLeaf="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_i1iBwMh-Eeup85LGMf4FVA" name="xPosition" visibility="private" isLeaf="true">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_i1uPAMh-Eeup85LGMf4FVA" name="GestureButtonPanel" visibility="public">
+        <ownedParameter xmi:id="_i1uPAch-Eeup85LGMf4FVA" name="type" type="_iqPXwMh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_i2ENQMh-Eeup85LGMf4FVA" name="paintComponent" visibility="protected">
+        <eAnnotations xmi:id="_i2E0UMh-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_i2E0Uch-Eeup85LGMf4FVA" key="documentation" value=" Calls the UI delegate's paint method, if the UI delegate&#xD;&#xA; is non-&lt;code>null&lt;/code>.  We pass the delegate a copy of the&#xD;&#xA; &lt;code>Graphics&lt;/code> object to protect the rest of the&#xD;&#xA; paint code from irrevocable changes&#xD;&#xA; (for example, &lt;code>Graphics.translate&lt;/code>).&#xD;&#xA; &lt;p>&#xD;&#xA; If you override this in a subclass you should not make permanent&#xD;&#xA; changes to the passed in &lt;code>Graphics&lt;/code>. For example, you&#xD;&#xA; should not alter the clip &lt;code>Rectangle&lt;/code> or modify the&#xD;&#xA; transform. If you need to do these operations you may find it&#xD;&#xA; easier to create a new &lt;code>Graphics&lt;/code> from the passed in&#xD;&#xA; &lt;code>Graphics&lt;/code> and manipulate it. Further, if you do not&#xD;&#xA; invoke super's implementation you must honor the opaque property, that is&#xD;&#xA; if this component is opaque, you must completely fill in the background&#xD;&#xA; in an opaque color. If you do not honor the opaque property you&#xD;&#xA; will likely see visual artifacts.&#xD;&#xA; &lt;p>&#xD;&#xA; The passed in &lt;code>Graphics&lt;/code> object might&#xD;&#xA; have a transform other than the identify transform&#xD;&#xA; installed on it.  In this case, you might get&#xD;&#xA; unexpected results if you cumulatively apply&#xD;&#xA; another transform.&#xD;&#xA; @param g the &lt;code>Graphics&lt;/code> object to protect&#xD;&#xA; @see #paint&#xD;&#xA; @see ComponentUI&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_i2E0Ush-Eeup85LGMf4FVA" name="graphics" type="_ireG0sh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_i2WhIMh-Eeup85LGMf4FVA" name="getGestureArrow" visibility="private">
+        <ownedParameter xmi:id="_i2WhIch-Eeup85LGMf4FVA" name="type" type="_iqPXwMh-Eeup85LGMf4FVA"/>
+        <ownedParameter xmi:id="_i2WhIsh-Eeup85LGMf4FVA" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_i2pcEMh-Eeup85LGMf4FVA" name="getGestureImage" visibility="private">
+        <ownedParameter xmi:id="_i2pcEch-Eeup85LGMf4FVA" name="type" type="_iqPXwMh-Eeup85LGMf4FVA"/>
+        <ownedParameter xmi:id="_i2pcEsh-Eeup85LGMf4FVA" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_i26h0Mh-Eeup85LGMf4FVA" name="getXPosition" visibility="private">
+        <ownedParameter xmi:id="_i26h0ch-Eeup85LGMf4FVA" name="type" type="_iqPXwMh-Eeup85LGMf4FVA"/>
+        <ownedParameter xmi:id="_i26h0sh-Eeup85LGMf4FVA" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAsI4Mh-Eeup85LGMf4FVA" name="game_event" client="_ip7OsMh-Eeup85LGMf4FVA" supplier="_iutoEMh-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAsI4ch-Eeup85LGMf4FVA" name="game_common" client="_ip7OsMh-Eeup85LGMf4FVA" supplier="_ior4kMh-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAsI4sh-Eeup85LGMf4FVA" name="game_main" client="_ip7OsMh-Eeup85LGMf4FVA" supplier="_iqWFcMh-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAsI48h-Eeup85LGMf4FVA" name="game_awt" client="_ip7OsMh-Eeup85LGMf4FVA" supplier="_ireG0ch-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAsI5Mh-Eeup85LGMf4FVA" name="game_swing" client="_ip7OsMh-Eeup85LGMf4FVA" supplier="_ircRoch-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_jAsv8Mh-Eeup85LGMf4FVA" name="gameState_target" memberEnd="_i0rGIMh-Eeup85LGMf4FVA _jAsv8ch-Eeup85LGMf4FVA">
+      <ownedEnd xmi:id="_jAsv8ch-Eeup85LGMf4FVA" name="target" type="_iqJ4MMh-Eeup85LGMf4FVA" association="_jAsv8Mh-Eeup85LGMf4FVA"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_iqTpMMh-Eeup85LGMf4FVA" name="highscores">
+    <packagedElement xmi:type="uml:Class" xmi:id="_iqVeYMh-Eeup85LGMf4FVA" name="HighscoresViewPanel" visibility="public">
+      <elementImport xmi:id="_i3GvEch-Eeup85LGMf4FVA" importedElement="_ipwPkMh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i3GvEsh-Eeup85LGMf4FVA" importedElement="_iqczIMh-Eeup85LGMf4FVA" visibility="private"/>
+      <generalization xmi:id="_i3GvEMh-Eeup85LGMf4FVA" general="_iqczIMh-Eeup85LGMf4FVA"/>
+      <ownedOperation xmi:id="_i3LAgMh-Eeup85LGMf4FVA" name="HighscoresViewPanel" visibility="public"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAsv8sh-Eeup85LGMf4FVA" name="highscores_common" client="_iqTpMMh-Eeup85LGMf4FVA" supplier="_ior4kMh-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAsv88h-Eeup85LGMf4FVA" name="highscores_main" client="_iqTpMMh-Eeup85LGMf4FVA" supplier="_iqWFcMh-Eeup85LGMf4FVA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_iqWFcMh-Eeup85LGMf4FVA" name="main">
+    <packagedElement xmi:type="uml:Class" xmi:id="_iqYhsMh-Eeup85LGMf4FVA" name="SchereSteinPapier" visibility="public">
+      <ownedOperation xmi:id="_i3WmsMh-Eeup85LGMf4FVA" name="main" visibility="public" isStatic="true">
+        <ownedParameter xmi:id="_i3Wmsch-Eeup85LGMf4FVA" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_i3Wmssh-Eeup85LGMf4FVA" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_iqaW4Mh-Eeup85LGMf4FVA" name="ViewPanelRegistryItems" visibility="public">
+      <ownedLiteral xmi:id="_i3a4IMh-Eeup85LGMf4FVA" name="WELCOME">
+        <specification xmi:type="uml:LiteralInteger" xmi:id="_i3a4Ich-Eeup85LGMf4FVA"/>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="_i3a4Ish-Eeup85LGMf4FVA" name="MENU">
+        <specification xmi:type="uml:LiteralInteger" xmi:id="_i3a4I8h-Eeup85LGMf4FVA"/>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="_i3bfMMh-Eeup85LGMf4FVA" name="GAME">
+        <specification xmi:type="uml:LiteralInteger" xmi:id="_i3bfMch-Eeup85LGMf4FVA"/>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="_i3bfMsh-Eeup85LGMf4FVA" name="HIGHSCORES">
+        <specification xmi:type="uml:LiteralInteger" xmi:id="_i3bfM8h-Eeup85LGMf4FVA"/>
+      </ownedLiteral>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_iqczIMh-Eeup85LGMf4FVA" name="ViewPanel" visibility="public" isAbstract="true">
+      <elementImport xmi:id="_i3g-wch-Eeup85LGMf4FVA" importedElement="_i1Gj8Mh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i3hl0Mh-Eeup85LGMf4FVA" importedElement="_ireG0sh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i3hl0ch-Eeup85LGMf4FVA" importedElement="_iret4ch-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i3hl0sh-Eeup85LGMf4FVA" importedElement="_ircRosh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i3hl08h-Eeup85LGMf4FVA" importedElement="_ipr-IMh-Eeup85LGMf4FVA" visibility="private"/>
+      <generalization xmi:id="_i3g-wMh-Eeup85LGMf4FVA" general="_ircRosh-Eeup85LGMf4FVA"/>
+      <ownedOperation xmi:id="_i3lQMMh-Eeup85LGMf4FVA" name="ViewPanel" visibility="public"/>
+      <ownedOperation xmi:id="_i35ZQMh-Eeup85LGMf4FVA" name="paintComponent" visibility="protected">
+        <eAnnotations xmi:id="_i35ZQch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_i35ZQsh-Eeup85LGMf4FVA" key="documentation" value=" Calls the UI delegate's paint method, if the UI delegate&#xD;&#xA; is non-&lt;code>null&lt;/code>.  We pass the delegate a copy of the&#xD;&#xA; &lt;code>Graphics&lt;/code> object to protect the rest of the&#xD;&#xA; paint code from irrevocable changes&#xD;&#xA; (for example, &lt;code>Graphics.translate&lt;/code>).&#xD;&#xA; &lt;p>&#xD;&#xA; If you override this in a subclass you should not make permanent&#xD;&#xA; changes to the passed in &lt;code>Graphics&lt;/code>. For example, you&#xD;&#xA; should not alter the clip &lt;code>Rectangle&lt;/code> or modify the&#xD;&#xA; transform. If you need to do these operations you may find it&#xD;&#xA; easier to create a new &lt;code>Graphics&lt;/code> from the passed in&#xD;&#xA; &lt;code>Graphics&lt;/code> and manipulate it. Further, if you do not&#xD;&#xA; invoke super's implementation you must honor the opaque property, that is&#xD;&#xA; if this component is opaque, you must completely fill in the background&#xD;&#xA; in an opaque color. If you do not honor the opaque property you&#xD;&#xA; will likely see visual artifacts.&#xD;&#xA; &lt;p>&#xD;&#xA; The passed in &lt;code>Graphics&lt;/code> object might&#xD;&#xA; have a transform other than the identify transform&#xD;&#xA; installed on it.  In this case, you might get&#xD;&#xA; unexpected results if you cumulatively apply&#xD;&#xA; another transform.&#xD;&#xA; @param g the &lt;code>Graphics&lt;/code> object to protect&#xD;&#xA; @see #paint&#xD;&#xA; @see ComponentUI&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_i35ZQ8h-Eeup85LGMf4FVA" name="graphics" type="_ireG0sh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_iqhEkMh-Eeup85LGMf4FVA" name="ViewPanelRegistry" visibility="public">
+      <elementImport xmi:id="_i4E_csh-Eeup85LGMf4FVA" importedElement="_i4E_cch-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i4E_dMh-Eeup85LGMf4FVA" importedElement="_i4E_c8h-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i4FmgMh-Eeup85LGMf4FVA" importedElement="_iqJ4MMh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i4Fmgch-Eeup85LGMf4FVA" importedElement="_iqVeYMh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i4Fmgsh-Eeup85LGMf4FVA" importedElement="_iqzYcMh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i4Fmg8h-Eeup85LGMf4FVA" importedElement="_iq77UMh-Eeup85LGMf4FVA" visibility="private"/>
+      <ownedAttribute xmi:id="_i4J38Mh-Eeup85LGMf4FVA" name="views" visibility="private" isLeaf="true" type="_i4E_c8h-Eeup85LGMf4FVA">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_i4KfAMh-Eeup85LGMf4FVA" name="" type="_i4E_c8h-Eeup85LGMf4FVA" value="new HashMap&lt;ViewPanelRegistryItems, ViewPanel>()"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_i4OwcMh-Eeup85LGMf4FVA" name="mainFrame" visibility="private" isLeaf="true" type="_iqi5wMh-Eeup85LGMf4FVA" association="_jAtXBMh-Eeup85LGMf4FVA"/>
+      <ownedAttribute xmi:id="_i4Sa0Mh-Eeup85LGMf4FVA" name="currentView" visibility="private" type="_iqczIMh-Eeup85LGMf4FVA" association="_jAtXBch-Eeup85LGMf4FVA">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_i4TB4Mh-Eeup85LGMf4FVA" name="" type="_iqczIMh-Eeup85LGMf4FVA" value="null"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_i4gdQMh-Eeup85LGMf4FVA" name="ViewPanelRegistry" visibility="public">
+        <ownedParameter xmi:id="_i4gdQch-Eeup85LGMf4FVA" name="mainFrame" type="_iqi5wMh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_i43poMh-Eeup85LGMf4FVA" name="getViewById" visibility="public">
+        <ownedParameter xmi:id="_i43poch-Eeup85LGMf4FVA" name="id" type="_iqaW4Mh-Eeup85LGMf4FVA"/>
+        <ownedParameter xmi:id="_i43posh-Eeup85LGMf4FVA" type="_iqczIMh-Eeup85LGMf4FVA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_i5PdEMh-Eeup85LGMf4FVA" name="setCurrentView" visibility="public">
+        <ownedParameter xmi:id="_i5PdEch-Eeup85LGMf4FVA" name="id" type="_iqaW4Mh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_i5kNMMh-Eeup85LGMf4FVA" name="paintCurrentView" visibility="private"/>
+      <ownedOperation xmi:id="_i5wacMh-Eeup85LGMf4FVA" name="registerViewPanels" visibility="private"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_iqi5wMh-Eeup85LGMf4FVA" name="MainFrame" visibility="public">
+      <elementImport xmi:id="_i56Lcsh-Eeup85LGMf4FVA" importedElement="_i56LcMh-Eeup85LGMf4FVA" visibility="private"/>
+      <generalization xmi:id="_i56Lcch-Eeup85LGMf4FVA" general="_i56LcMh-Eeup85LGMf4FVA"/>
+      <ownedAttribute xmi:id="_i59OwMh-Eeup85LGMf4FVA" name="viewPanelRegistry" visibility="public" isLeaf="true" type="_iqhEkMh-Eeup85LGMf4FVA" association="_jAtXBMh-Eeup85LGMf4FVA"/>
+      <ownedOperation xmi:id="_i6BgMMh-Eeup85LGMf4FVA" name="MainFrame" visibility="public"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAsv9Mh-Eeup85LGMf4FVA" name="main_awt" client="_iqWFcMh-Eeup85LGMf4FVA" supplier="_ireG0ch-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAsv9ch-Eeup85LGMf4FVA" name="main_swing" client="_iqWFcMh-Eeup85LGMf4FVA" supplier="_ircRoch-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAsv9sh-Eeup85LGMf4FVA" name="main_common" client="_iqWFcMh-Eeup85LGMf4FVA" supplier="_ior4kMh-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAsv98h-Eeup85LGMf4FVA" name="main_util" client="_iqWFcMh-Eeup85LGMf4FVA" supplier="_i4E_cMh-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAtXAMh-Eeup85LGMf4FVA" name="main_game" client="_iqWFcMh-Eeup85LGMf4FVA" supplier="_ip7OsMh-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAtXAch-Eeup85LGMf4FVA" name="main_highscores" client="_iqWFcMh-Eeup85LGMf4FVA" supplier="_iqTpMMh-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAtXAsh-Eeup85LGMf4FVA" name="main_menu" client="_iqWFcMh-Eeup85LGMf4FVA" supplier="_iqjg0Mh-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAtXA8h-Eeup85LGMf4FVA" name="main_welcome" client="_iqWFcMh-Eeup85LGMf4FVA" supplier="_iq2bwch-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_jAtXBMh-Eeup85LGMf4FVA" name="mainFrame_viewPanelRegistry" memberEnd="_i4OwcMh-Eeup85LGMf4FVA _i59OwMh-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_jAtXBch-Eeup85LGMf4FVA" name="currentView_target" memberEnd="_i4Sa0Mh-Eeup85LGMf4FVA _jAtXBsh-Eeup85LGMf4FVA">
+      <ownedEnd xmi:id="_jAtXBsh-Eeup85LGMf4FVA" name="target" type="_iqhEkMh-Eeup85LGMf4FVA" association="_jAtXBch-Eeup85LGMf4FVA"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_iqjg0Mh-Eeup85LGMf4FVA" name="menu">
+    <packagedElement xmi:type="uml:Class" xmi:id="_iql9EMh-Eeup85LGMf4FVA" name="InfoButtonPanel" visibility="public">
+      <elementImport xmi:id="_i6ahwMh-Eeup85LGMf4FVA" importedElement="_ireG0sh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i6ahwch-Eeup85LGMf4FVA" importedElement="_iret4ch-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i6ahwsh-Eeup85LGMf4FVA" importedElement="_ircRosh-Eeup85LGMf4FVA" visibility="private"/>
+      <generalization xmi:id="_i6Z6sMh-Eeup85LGMf4FVA" general="_ircRosh-Eeup85LGMf4FVA"/>
+      <ownedOperation xmi:id="_i6faQMh-Eeup85LGMf4FVA" name="InfoButtonPanel" visibility="public"/>
+      <ownedOperation xmi:id="_i6xHEMh-Eeup85LGMf4FVA" name="paintComponent" visibility="protected">
+        <eAnnotations xmi:id="_i6xHEch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_i6xHEsh-Eeup85LGMf4FVA" key="documentation" value=" Calls the UI delegate's paint method, if the UI delegate&#xD;&#xA; is non-&lt;code>null&lt;/code>.  We pass the delegate a copy of the&#xD;&#xA; &lt;code>Graphics&lt;/code> object to protect the rest of the&#xD;&#xA; paint code from irrevocable changes&#xD;&#xA; (for example, &lt;code>Graphics.translate&lt;/code>).&#xD;&#xA; &lt;p>&#xD;&#xA; If you override this in a subclass you should not make permanent&#xD;&#xA; changes to the passed in &lt;code>Graphics&lt;/code>. For example, you&#xD;&#xA; should not alter the clip &lt;code>Rectangle&lt;/code> or modify the&#xD;&#xA; transform. If you need to do these operations you may find it&#xD;&#xA; easier to create a new &lt;code>Graphics&lt;/code> from the passed in&#xD;&#xA; &lt;code>Graphics&lt;/code> and manipulate it. Further, if you do not&#xD;&#xA; invoke super's implementation you must honor the opaque property, that is&#xD;&#xA; if this component is opaque, you must completely fill in the background&#xD;&#xA; in an opaque color. If you do not honor the opaque property you&#xD;&#xA; will likely see visual artifacts.&#xD;&#xA; &lt;p>&#xD;&#xA; The passed in &lt;code>Graphics&lt;/code> object might&#xD;&#xA; have a transform other than the identify transform&#xD;&#xA; installed on it.  In this case, you might get&#xD;&#xA; unexpected results if you cumulatively apply&#xD;&#xA; another transform.&#xD;&#xA; @param g the &lt;code>Graphics&lt;/code> object to protect&#xD;&#xA; @see #paint&#xD;&#xA; @see ComponentUI&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_i6xHE8h-Eeup85LGMf4FVA" name="graphics" type="_ireG0sh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_iqoZUMh-Eeup85LGMf4FVA" name="HighscoresButtonPanelMouseListener" visibility="public">
+      <elementImport xmi:id="_i6_JgMh-Eeup85LGMf4FVA" importedElement="_iutoEsh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i6_wkMh-Eeup85LGMf4FVA" importedElement="_iutoEch-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i6_wkch-Eeup85LGMf4FVA" importedElement="_iuuPIsh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i6_wksh-Eeup85LGMf4FVA" importedElement="_iqi5wMh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i6_wk8h-Eeup85LGMf4FVA" importedElement="_iqaW4Mh-Eeup85LGMf4FVA" visibility="private"/>
+      <ownedOperation xmi:id="_i7FQIMh-Eeup85LGMf4FVA" name="HighscoresButtonPanelMouseListener" visibility="public"/>
+      <ownedOperation xmi:id="_i7dDkMh-Eeup85LGMf4FVA" name="mouseClicked" visibility="public">
+        <eAnnotations xmi:id="_i7dDkch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_i7dDksh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when the mouse button has been clicked (pressed&#xD;&#xA; and released) on a component.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_i7dDk8h-Eeup85LGMf4FVA" name="event" type="_iutoEsh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_i7v-gMh-Eeup85LGMf4FVA" name="mousePressed" visibility="public">
+        <eAnnotations xmi:id="_i7v-gch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_i7v-gsh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when a mouse button has been pressed on a component.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_i7v-g8h-Eeup85LGMf4FVA" name="e" type="_iutoEsh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_i8BEQMh-Eeup85LGMf4FVA" name="mouseReleased" visibility="public">
+        <eAnnotations xmi:id="_i8BEQch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_i8BEQsh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when a mouse button has been released on a component.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_i8BEQ8h-Eeup85LGMf4FVA" name="e" type="_iutoEsh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_i8TYIMh-Eeup85LGMf4FVA" name="mouseEntered" visibility="public">
+        <eAnnotations xmi:id="_i8TYIch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_i8TYIsh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when the mouse enters a component.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_i8TYI8h-Eeup85LGMf4FVA" name="e" type="_iutoEsh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_i8j20Mh-Eeup85LGMf4FVA" name="mouseExited" visibility="public">
+        <eAnnotations xmi:id="_i8j20ch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_i8j20sh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when the mouse exits a component.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_i8j208h-Eeup85LGMf4FVA" name="e" type="_iutoEsh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_iqrcoMh-Eeup85LGMf4FVA" name="StartButtonPanelMouseListener" visibility="public">
+      <elementImport xmi:id="_i8uO4Mh-Eeup85LGMf4FVA" importedElement="_iutoEsh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i8u18Mh-Eeup85LGMf4FVA" importedElement="_iutoEch-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i8u18ch-Eeup85LGMf4FVA" importedElement="_iuuPIsh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i8u18sh-Eeup85LGMf4FVA" importedElement="_iqi5wMh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i8u188h-Eeup85LGMf4FVA" importedElement="_iqaW4Mh-Eeup85LGMf4FVA" visibility="private"/>
+      <ownedOperation xmi:id="_i89fcMh-Eeup85LGMf4FVA" name="mouseClicked" visibility="public">
+        <eAnnotations xmi:id="_i89fcch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_i89fcsh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when the mouse button has been clicked (pressed&#xD;&#xA; and released) on a component.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_i89fc8h-Eeup85LGMf4FVA" name="event" type="_iutoEsh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_i9N-IMh-Eeup85LGMf4FVA" name="mousePressed" visibility="public">
+        <eAnnotations xmi:id="_i9N-Ich-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_i9N-Ish-Eeup85LGMf4FVA" key="documentation" value=" Invoked when a mouse button has been pressed on a component.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_i9N-I8h-Eeup85LGMf4FVA" name="e" type="_iutoEsh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_i9fD4Mh-Eeup85LGMf4FVA" name="mouseReleased" visibility="public">
+        <eAnnotations xmi:id="_i9fD4ch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_i9fD4sh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when a mouse button has been released on a component.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_i9fD48h-Eeup85LGMf4FVA" name="e" type="_iutoEsh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_i9u7gMh-Eeup85LGMf4FVA" name="mouseEntered" visibility="public">
+        <eAnnotations xmi:id="_i9u7gch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_i9u7gsh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when the mouse enters a component.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_i9u7g8h-Eeup85LGMf4FVA" name="e" type="_iutoEsh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_i99lAMh-Eeup85LGMf4FVA" name="mouseExited" visibility="public">
+        <eAnnotations xmi:id="_i99lAch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_i99lAsh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when the mouse exits a component.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_i99lA8h-Eeup85LGMf4FVA" name="e" type="_iutoEsh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_iqt44Mh-Eeup85LGMf4FVA" name="HighscoresButtonPanel" visibility="public">
+      <elementImport xmi:id="_i-Fg0Mh-Eeup85LGMf4FVA" importedElement="_ireG0sh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i-Fg0ch-Eeup85LGMf4FVA" importedElement="_iret4ch-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i-Fg0sh-Eeup85LGMf4FVA" importedElement="_ircRosh-Eeup85LGMf4FVA" visibility="private"/>
+      <generalization xmi:id="_i-E5wMh-Eeup85LGMf4FVA" general="_ircRosh-Eeup85LGMf4FVA"/>
+      <ownedOperation xmi:id="_i-IkIMh-Eeup85LGMf4FVA" name="HighscoresButtonPanel" visibility="public"/>
+      <ownedOperation xmi:id="_i-UxYMh-Eeup85LGMf4FVA" name="paintComponent" visibility="protected">
+        <eAnnotations xmi:id="_i-UxYch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_i-UxYsh-Eeup85LGMf4FVA" key="documentation" value=" Calls the UI delegate's paint method, if the UI delegate&#xD;&#xA; is non-&lt;code>null&lt;/code>.  We pass the delegate a copy of the&#xD;&#xA; &lt;code>Graphics&lt;/code> object to protect the rest of the&#xD;&#xA; paint code from irrevocable changes&#xD;&#xA; (for example, &lt;code>Graphics.translate&lt;/code>).&#xD;&#xA; &lt;p>&#xD;&#xA; If you override this in a subclass you should not make permanent&#xD;&#xA; changes to the passed in &lt;code>Graphics&lt;/code>. For example, you&#xD;&#xA; should not alter the clip &lt;code>Rectangle&lt;/code> or modify the&#xD;&#xA; transform. If you need to do these operations you may find it&#xD;&#xA; easier to create a new &lt;code>Graphics&lt;/code> from the passed in&#xD;&#xA; &lt;code>Graphics&lt;/code> and manipulate it. Further, if you do not&#xD;&#xA; invoke super's implementation you must honor the opaque property, that is&#xD;&#xA; if this component is opaque, you must completely fill in the background&#xD;&#xA; in an opaque color. If you do not honor the opaque property you&#xD;&#xA; will likely see visual artifacts.&#xD;&#xA; &lt;p>&#xD;&#xA; The passed in &lt;code>Graphics&lt;/code> object might&#xD;&#xA; have a transform other than the identify transform&#xD;&#xA; installed on it.  In this case, you might get&#xD;&#xA; unexpected results if you cumulatively apply&#xD;&#xA; another transform.&#xD;&#xA; @param g the &lt;code>Graphics&lt;/code> object to protect&#xD;&#xA; @see #paint&#xD;&#xA; @see ComponentUI&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_i-UxY8h-Eeup85LGMf4FVA" name="graphics" type="_ireG0sh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_iqwVIMh-Eeup85LGMf4FVA" name="StartButtonPanel" visibility="public">
+      <elementImport xmi:id="_i-cGIch-Eeup85LGMf4FVA" importedElement="_ireG0sh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i-cGIsh-Eeup85LGMf4FVA" importedElement="_iret4ch-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i-ctMMh-Eeup85LGMf4FVA" importedElement="_ircRosh-Eeup85LGMf4FVA" visibility="private"/>
+      <generalization xmi:id="_i-cGIMh-Eeup85LGMf4FVA" general="_ircRosh-Eeup85LGMf4FVA"/>
+      <ownedOperation xmi:id="_i-fJcMh-Eeup85LGMf4FVA" name="StartButtonPanel" visibility="public"/>
+      <ownedOperation xmi:id="_i-qvoMh-Eeup85LGMf4FVA" name="paintComponent" visibility="protected">
+        <eAnnotations xmi:id="_i-qvoch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_i-qvosh-Eeup85LGMf4FVA" key="documentation" value=" Calls the UI delegate's paint method, if the UI delegate&#xD;&#xA; is non-&lt;code>null&lt;/code>.  We pass the delegate a copy of the&#xD;&#xA; &lt;code>Graphics&lt;/code> object to protect the rest of the&#xD;&#xA; paint code from irrevocable changes&#xD;&#xA; (for example, &lt;code>Graphics.translate&lt;/code>).&#xD;&#xA; &lt;p>&#xD;&#xA; If you override this in a subclass you should not make permanent&#xD;&#xA; changes to the passed in &lt;code>Graphics&lt;/code>. For example, you&#xD;&#xA; should not alter the clip &lt;code>Rectangle&lt;/code> or modify the&#xD;&#xA; transform. If you need to do these operations you may find it&#xD;&#xA; easier to create a new &lt;code>Graphics&lt;/code> from the passed in&#xD;&#xA; &lt;code>Graphics&lt;/code> and manipulate it. Further, if you do not&#xD;&#xA; invoke super's implementation you must honor the opaque property, that is&#xD;&#xA; if this component is opaque, you must completely fill in the background&#xD;&#xA; in an opaque color. If you do not honor the opaque property you&#xD;&#xA; will likely see visual artifacts.&#xD;&#xA; &lt;p>&#xD;&#xA; The passed in &lt;code>Graphics&lt;/code> object might&#xD;&#xA; have a transform other than the identify transform&#xD;&#xA; installed on it.  In this case, you might get&#xD;&#xA; unexpected results if you cumulatively apply&#xD;&#xA; another transform.&#xD;&#xA; @param g the &lt;code>Graphics&lt;/code> object to protect&#xD;&#xA; @see #paint&#xD;&#xA; @see ComponentUI&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_i-qvo8h-Eeup85LGMf4FVA" name="graphics" type="_ireG0sh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_iqzYcMh-Eeup85LGMf4FVA" name="MenuViewPanel" visibility="public">
+      <elementImport xmi:id="_i-yrcMh-Eeup85LGMf4FVA" importedElement="_iw9DwMh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i-yrcch-Eeup85LGMf4FVA" importedElement="_iw71oMh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i-yrcsh-Eeup85LGMf4FVA" importedElement="_ip29QMh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i-yrc8h-Eeup85LGMf4FVA" importedElement="_iqczIMh-Eeup85LGMf4FVA" visibility="private"/>
+      <generalization xmi:id="_i-yEYMh-Eeup85LGMf4FVA" general="_iqczIMh-Eeup85LGMf4FVA"/>
+      <ownedOperation xmi:id="_i-1uwMh-Eeup85LGMf4FVA" name="MenuViewPanel" visibility="public"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_iq2bwMh-Eeup85LGMf4FVA" name="MenuViewPanelKeyListener" visibility="public">
+      <elementImport xmi:id="_i-6nQMh-Eeup85LGMf4FVA" importedElement="_izQJ0Mh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i-6nQch-Eeup85LGMf4FVA" importedElement="_izPiwMh-Eeup85LGMf4FVA" visibility="private"/>
+      <ownedOperation xmi:id="_i-71YMh-Eeup85LGMf4FVA" name="MenuViewPanelKeyListener" visibility="public"/>
+      <ownedOperation xmi:id="_i_B8AMh-Eeup85LGMf4FVA" name="keyPressed" visibility="public">
+        <eAnnotations xmi:id="_i_B8Ach-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_i_B8Ash-Eeup85LGMf4FVA" key="documentation" value=" Invoked when a key has been pressed.&#xD;&#xA; See the class description for {@link KeyEvent} for a definition of&#xD;&#xA; a key pressed event.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_i_B8A8h-Eeup85LGMf4FVA" name="event" type="_izQJ0Mh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_i_HbkMh-Eeup85LGMf4FVA" name="keyTyped" visibility="public">
+        <eAnnotations xmi:id="_i_Hbkch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_i_Hbksh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when a key has been typed.&#xD;&#xA; See the class description for {@link KeyEvent} for a definition of&#xD;&#xA; a key typed event.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_i_Hbk8h-Eeup85LGMf4FVA" name="e" type="_izQJ0Mh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_i_NiMMh-Eeup85LGMf4FVA" name="keyReleased" visibility="public">
+        <eAnnotations xmi:id="_i_NiMch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_i_NiMsh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when a key has been released.&#xD;&#xA; See the class description for {@link KeyEvent} for a definition of&#xD;&#xA; a key released event.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_i_NiM8h-Eeup85LGMf4FVA" name="e" type="_izQJ0Mh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAtXB8h-Eeup85LGMf4FVA" name="menu_awt" client="_iqjg0Mh-Eeup85LGMf4FVA" supplier="_ireG0ch-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAtXCMh-Eeup85LGMf4FVA" name="menu_swing" client="_iqjg0Mh-Eeup85LGMf4FVA" supplier="_ircRoch-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAtXCch-Eeup85LGMf4FVA" name="menu_event" client="_iqjg0Mh-Eeup85LGMf4FVA" supplier="_iutoEMh-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAtXCsh-Eeup85LGMf4FVA" name="menu_main" client="_iqjg0Mh-Eeup85LGMf4FVA" supplier="_iqWFcMh-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAtXC8h-Eeup85LGMf4FVA" name="menu_common" client="_iqjg0Mh-Eeup85LGMf4FVA" supplier="_ior4kMh-Eeup85LGMf4FVA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_iq2bwch-Eeup85LGMf4FVA" name="welcome">
+    <packagedElement xmi:type="uml:Class" xmi:id="_iq44AMh-Eeup85LGMf4FVA" name="WelcomeViewPanelKeyListener" visibility="public">
+      <elementImport xmi:id="_i_ZvcMh-Eeup85LGMf4FVA" importedElement="_izQJ0Mh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i_Zvcch-Eeup85LGMf4FVA" importedElement="_izPiwMh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i_Zvcsh-Eeup85LGMf4FVA" importedElement="_iuuPIsh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i_Zvc8h-Eeup85LGMf4FVA" importedElement="_iqi5wMh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_i_aWgMh-Eeup85LGMf4FVA" importedElement="_iqaW4Mh-Eeup85LGMf4FVA" visibility="private"/>
+      <ownedOperation xmi:id="_i_cywMh-Eeup85LGMf4FVA" name="WelcomeViewPanelKeyListener" visibility="public"/>
+      <ownedOperation xmi:id="_i_q1MMh-Eeup85LGMf4FVA" name="keyPressed" visibility="public">
+        <eAnnotations xmi:id="_i_q1Mch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_i_q1Msh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when a key has been pressed.&#xD;&#xA; See the class description for {@link KeyEvent} for a definition of&#xD;&#xA; a key pressed event.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_i_q1M8h-Eeup85LGMf4FVA" name="event" type="_izQJ0Mh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_i_6s0Mh-Eeup85LGMf4FVA" name="keyTyped" visibility="public">
+        <eAnnotations xmi:id="_i_6s0ch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_i_6s0sh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when a key has been typed.&#xD;&#xA; See the class description for {@link KeyEvent} for a definition of&#xD;&#xA; a key typed event.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_i_6s08h-Eeup85LGMf4FVA" name="e" type="_izQJ0Mh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_jAJWUMh-Eeup85LGMf4FVA" name="keyReleased" visibility="public">
+        <eAnnotations xmi:id="_jAJWUch-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_jAJWUsh-Eeup85LGMf4FVA" key="documentation" value=" Invoked when a key has been released.&#xD;&#xA; See the class description for {@link KeyEvent} for a definition of&#xD;&#xA; a key released event.&#xD;&#xA; @param e the event to be processed&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_jAJWU8h-Eeup85LGMf4FVA" name="e" type="_izQJ0Mh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_iq77UMh-Eeup85LGMf4FVA" name="WelcomeViewPanel" visibility="public">
+      <elementImport xmi:id="_jARSIch-Eeup85LGMf4FVA" importedElement="_iw9DwMh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_jAR5MMh-Eeup85LGMf4FVA" importedElement="_ireG0sh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_jAR5Mch-Eeup85LGMf4FVA" importedElement="_iret4ch-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_jAR5Msh-Eeup85LGMf4FVA" importedElement="_iw71oMh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_jAR5M8h-Eeup85LGMf4FVA" importedElement="_ip29QMh-Eeup85LGMf4FVA" visibility="private"/>
+      <elementImport xmi:id="_jAR5NMh-Eeup85LGMf4FVA" importedElement="_iqczIMh-Eeup85LGMf4FVA" visibility="private"/>
+      <generalization xmi:id="_jARSIMh-Eeup85LGMf4FVA" general="_iqczIMh-Eeup85LGMf4FVA"/>
+      <ownedOperation xmi:id="_jAVjkMh-Eeup85LGMf4FVA" name="WelcomeViewPanel" visibility="public"/>
+      <ownedOperation xmi:id="_jAk0IMh-Eeup85LGMf4FVA" name="paintComponent" visibility="protected">
+        <eAnnotations xmi:id="_jAk0Ich-Eeup85LGMf4FVA" source="http://www.eclipse.org/umlgen/reverse/java/doc">
+          <details xmi:id="_jAk0Ish-Eeup85LGMf4FVA" key="documentation" value=" Calls the UI delegate's paint method, if the UI delegate&#xD;&#xA; is non-&lt;code>null&lt;/code>.  We pass the delegate a copy of the&#xD;&#xA; &lt;code>Graphics&lt;/code> object to protect the rest of the&#xD;&#xA; paint code from irrevocable changes&#xD;&#xA; (for example, &lt;code>Graphics.translate&lt;/code>).&#xD;&#xA; &lt;p>&#xD;&#xA; If you override this in a subclass you should not make permanent&#xD;&#xA; changes to the passed in &lt;code>Graphics&lt;/code>. For example, you&#xD;&#xA; should not alter the clip &lt;code>Rectangle&lt;/code> or modify the&#xD;&#xA; transform. If you need to do these operations you may find it&#xD;&#xA; easier to create a new &lt;code>Graphics&lt;/code> from the passed in&#xD;&#xA; &lt;code>Graphics&lt;/code> and manipulate it. Further, if you do not&#xD;&#xA; invoke super's implementation you must honor the opaque property, that is&#xD;&#xA; if this component is opaque, you must completely fill in the background&#xD;&#xA; in an opaque color. If you do not honor the opaque property you&#xD;&#xA; will likely see visual artifacts.&#xD;&#xA; &lt;p>&#xD;&#xA; The passed in &lt;code>Graphics&lt;/code> object might&#xD;&#xA; have a transform other than the identify transform&#xD;&#xA; installed on it.  In this case, you might get&#xD;&#xA; unexpected results if you cumulatively apply&#xD;&#xA; another transform.&#xD;&#xA; @param g the &lt;code>Graphics&lt;/code> object to protect&#xD;&#xA; @see #paint&#xD;&#xA; @see ComponentUI&#xD;&#xA; "/>
+        </eAnnotations>
+        <ownedParameter xmi:id="_jAk0I8h-Eeup85LGMf4FVA" name="graphics" type="_ireG0sh-Eeup85LGMf4FVA"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAt-EMh-Eeup85LGMf4FVA" name="welcome_event" client="_iq2bwch-Eeup85LGMf4FVA" supplier="_iutoEMh-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAt-Ech-Eeup85LGMf4FVA" name="welcome_swing" client="_iq2bwch-Eeup85LGMf4FVA" supplier="_ircRoch-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAt-Esh-Eeup85LGMf4FVA" name="welcome_main" client="_iq2bwch-Eeup85LGMf4FVA" supplier="_iqWFcMh-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAt-E8h-Eeup85LGMf4FVA" name="welcome_awt" client="_iq2bwch-Eeup85LGMf4FVA" supplier="_ireG0ch-Eeup85LGMf4FVA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_jAt-FMh-Eeup85LGMf4FVA" name="welcome_common" client="_iq2bwch-Eeup85LGMf4FVA" supplier="_ior4kMh-Eeup85LGMf4FVA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_ircRoMh-Eeup85LGMf4FVA" name="javax">
+    <packagedElement xmi:type="uml:Package" xmi:id="_ircRoch-Eeup85LGMf4FVA" name="swing">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_ircRosh-Eeup85LGMf4FVA" name="JPanel"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_iret4ch-Eeup85LGMf4FVA" name="ImageIcon"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_iuuPIsh-Eeup85LGMf4FVA" name="SwingUtilities"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_iw71oMh-Eeup85LGMf4FVA" name="JLabel"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_i56LcMh-Eeup85LGMf4FVA" name="JFrame"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_ireG0Mh-Eeup85LGMf4FVA" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_ireG0ch-Eeup85LGMf4FVA" name="awt">
+      <packagedElement xmi:type="uml:Package" xmi:id="_iutoEMh-Eeup85LGMf4FVA" name="event">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_iutoEch-Eeup85LGMf4FVA" name="MouseListener"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_iutoEsh-Eeup85LGMf4FVA" name="MouseEvent"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_izPiwMh-Eeup85LGMf4FVA" name="KeyListener"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_izQJ0Mh-Eeup85LGMf4FVA" name="KeyEvent"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_ireG0sh-Eeup85LGMf4FVA" name="Graphics"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_iw8csch-Eeup85LGMf4FVA" name="Color"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_iw9DwMh-Eeup85LGMf4FVA" name="Font"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_i1Gj8Mh-Eeup85LGMf4FVA" name="Dimension"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_i4E_cMh-Eeup85LGMf4FVA" name="util">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_i4E_cch-Eeup85LGMf4FVA" name="HashMap"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_i4E_c8h-Eeup85LGMf4FVA" name="Map"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
