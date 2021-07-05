@@ -1,6 +1,5 @@
 package game;
 
-import java.awt.Dimension;
 import java.awt.Font;
 
 import javax.swing.JLabel;
@@ -13,7 +12,7 @@ public class GameStepGestureSelectionPanel extends JPanel {
 	public GameStepGestureSelectionPanel() {
 		
 		this.setLayout(null);
-		this.setBounds(0, 30, 370, 400);
+		this.setBounds(0, 30, 370, 440);
 		this.setOpaque(false);
 		
 		this.add(new GestureButtonPanel(Gesture.ROCK));

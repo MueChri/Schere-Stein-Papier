@@ -11,20 +11,19 @@ public class GameStepGestureSelectionPanelKeyListener implements KeyListener {
 		GameViewPanel panel = (GameViewPanel) event.getComponent();
 		switch(key) {
 			case KeyEvent.VK_DOWN:
-				panel.gameState.setGestureOpponent();
-				//panel.gameState.setGesturePlayer(GestureTypes.PAPER);
+				panel.gameState.setGesturePlayer(Gesture.PAPER);
 				break;
 			case KeyEvent.VK_LEFT:
-				panel.gameState.setGestureOpponent();
-				//panel.gameState.setGesturePlayer(GestureTypes.ROCK);
+				panel.gameState.setGesturePlayer(Gesture.ROCK);
 				break;
 			case KeyEvent.VK_RIGHT:
-				panel.gameState.setGestureOpponent();
-				//panel.gameState.setGesturePlayer(GestureTypes.SCISSORS);
+				panel.gameState.setGesturePlayer(Gesture.SCISSORS);
 				break;
 			default:
 		}
-		// panel.nextStep()
+		if (panel.gameState.getGesturePlayer() != null) {
+			panel.showOpponentGestureSelection();
+		}
 	}
 
 	@Override

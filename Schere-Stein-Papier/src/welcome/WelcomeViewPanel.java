@@ -14,11 +14,11 @@ public class WelcomeViewPanel extends ViewPanel {
 	public WelcomeViewPanel() {
 
 		JLabel welcomeLabel = new CenteredText("ROCK PAPER SCISSORS", 29, Font.BOLD);
-		welcomeLabel.setBounds(4, 39, 373, 36);
+		welcomeLabel.setBounds(0, 40, 370, 35);
 		this.add(welcomeLabel);
 
-		JLabel continueLabel = new CenteredText("press enter...", 18, Font.BOLD);
-		continueLabel.setBounds(98,417,173,44);
+		JLabel continueLabel = new CenteredText("PRESS ENTER TO CONTINUE", 18, Font.BOLD);
+		continueLabel.setBounds(0, 400, 370, 25);
 		this.add(continueLabel);
 		
 		this.addKeyListener(new WelcomeViewPanelKeyListener());

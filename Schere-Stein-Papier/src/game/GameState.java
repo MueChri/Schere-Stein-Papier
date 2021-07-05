@@ -4,19 +4,24 @@ import java.util.Random;
 
 public class GameState {
 	
-	private Gesture pickedGesturePlayer;
-	private Gesture pickedGestureOpponent;
+	private Gesture pickedGesturePlayer = null;
+	private Gesture pickedGestureOpponent = null;
+	private int currentRound = 0;
 	private boolean roundCounted = false;
+	private boolean gameClosed = false;
+	private GameRoundResult lastResult = null;
 	
 	private int roundsWon = 0;
 	private int roundsLost = 0;
 	private int roundsDraw = 0;
 	
+	public final int maxRounds = 10;
+	
 	public GameState() {
 		this.resetGameState();
 	}
 	
-	public int getRoundsPlayed() {
+	public int getRoundsCounted() {
 		return this.roundsWon + this.roundsLost + this.roundsDraw;
 	}
 	
@@ -33,16 +38,34 @@ public class GameState {
 	}
 	
 	public void resetGameState() {
+		this.gameClosed = false;
 		this.roundsWon = 0;
 		this.roundsLost = 0;
 		this.roundsDraw = 0;
-		this.resetRoundState();
+		this.currentRound = 0;
+		this.nextRound();
 	}
 	
-	public void resetRoundState() {
+	public void nextRound() {
+		if (this.gameClosed) {
+			return;
+		}
 		this.pickedGesturePlayer = null;
 		this.pickedGestureOpponent = null;
 		this.roundCounted = false;
+		this.currentRound = this.currentRound < this.maxRounds ? this.currentRound + 1 : this.maxRounds;
+	}
+	
+	public void closeGame() {
+		this.gameClosed = true;
+	}
+	
+	public boolean isGameClosed() {
+		return this.gameClosed;
+	}
+	
+	public int getCurrentRound() {
+		return this.currentRound;
 	}
 	
 	public void setGesturePlayer(Gesture gesture) {
@@ -53,6 +76,10 @@ public class GameState {
 		System.out.println("Player picked " + this.pickedGesturePlayer);
 	}
 	
+	public Gesture getGesturePlayer() {
+		return this.pickedGesturePlayer;
+	}
+	
 	public void setGestureOpponent() {
 		if (this.pickedGestureOpponent != null) {
 			return;
@@ -61,8 +88,12 @@ public class GameState {
 		System.out.println("Opponent picked " + this.pickedGestureOpponent);
 	}
 	
+	public Gesture getGestureOpponent() {
+		return this.pickedGestureOpponent;
+	}
+	
 	public void countRound() {
-		if (this.roundCounted) {
+		if (this.roundCounted || this.hasMaxRoundsPlayed()) {
 			return;
 		}
 		GameRoundResult result = this.getRoundResult();
@@ -73,7 +104,16 @@ public class GameState {
 		} else {
 			this.roundsDraw++;
 		}
+		this.lastResult = result;
 		this.roundCounted = true;
+	}
+	
+	public GameRoundResult getLastResult() {
+		return this.lastResult;
+	}
+
+	private boolean hasMaxRoundsPlayed() {
+		return this.getRoundsCounted() >= this.maxRounds;
 	}
 	
 	private GameRoundResult getRoundResult() {
@@ -93,7 +133,7 @@ public class GameState {
 			} else {
 				return GameRoundResult.LOST;
 			}
-		} else {
+		} else { // scissors
 			if (this.pickedGestureOpponent == Gesture.ROCK) {
 				return GameRoundResult.LOST;
 			} else if (this.pickedGestureOpponent == Gesture.PAPER) {
@@ -107,7 +147,6 @@ public class GameState {
 	private Gesture getRandomGesture() {
 		Gesture[] gestures = {Gesture.ROCK, Gesture.PAPER, Gesture.SCISSORS};
 		int random = new Random().nextInt(gestures.length);
-		System.out.println(random);
 		return gestures[random];
 	}
 	
