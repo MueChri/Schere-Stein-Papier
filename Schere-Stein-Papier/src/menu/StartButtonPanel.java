@@ -16,7 +16,7 @@ public class StartButtonPanel extends JPanel {
 	
 	protected void paintComponent(Graphics graphics) {
 		super.paintComponent(graphics);
-		graphics.drawImage(new ImageIcon("images/StartNowButtonShadow.png").getImage(), 0, 0, this);
+		graphics.drawImage(new ImageIcon("src/images/StartNowButtonShadow.png").getImage(), 0, 0, this);
 	}
 	
 }

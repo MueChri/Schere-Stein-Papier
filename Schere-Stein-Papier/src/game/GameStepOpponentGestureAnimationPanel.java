@@ -51,7 +51,7 @@ public class GameStepOpponentGestureAnimationPanel extends JPanel {
 	
 	protected void paintComponent(Graphics graphics) {
 		super.paintComponent(graphics);
-		Image image = new ImageIcon("images/Fist.png").getImage();
+		Image image = new ImageIcon("src/images/Fist.png").getImage();
 		graphics.drawImage(image, 87, posY, 176, 150, this);
 	}
 

@@ -5,6 +5,8 @@ import javax.swing.JFrame;
 public class MainFrame extends JFrame {
 	
 	public final ViewPanelRegistry viewPanelRegistry;
+	
+	public String playerName = "";
 		
 	public MainFrame() {
 		

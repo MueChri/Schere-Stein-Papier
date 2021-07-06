@@ -16,7 +16,7 @@ public class HighscoresButtonPanel extends JPanel {
 	
 	protected void paintComponent(Graphics graphics) {
 		super.paintComponent(graphics);
-		graphics.drawImage(new ImageIcon("images/HighscoreShadow.png").getImage(), 0, 0, this);
+		graphics.drawImage(new ImageIcon("src/images/HighscoreShadow.png").getImage(), 0, 0, this);
 	}
 	
 }

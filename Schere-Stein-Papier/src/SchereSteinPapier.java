@@ -1,9 +1,8 @@
-package main;
-
 import java.sql.Connection;
 import java.sql.SQLException;
 
 import highscores.OracleDsSingleton;
+import main.MainFrame;
 
 public class SchereSteinPapier {
 

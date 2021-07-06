@@ -19,12 +19,12 @@ public class GameStepGestureSelectionPanel extends JPanel {
 		this.add(new GestureButtonPanel(Gesture.PAPER));
 		this.add(new GestureButtonPanel(Gesture.SCISSORS));
 
-		JLabel pickGesture = new CenteredText("PICK GESTURE", 30, Font.BOLD);
-		pickGesture.setBounds(75, 31, 235, 36);
+		JLabel pickGesture = new CenteredText("PICK YOUR GESTURE", 29, Font.BOLD);
+		pickGesture.setBounds(0, 40, 370, 30);
 		this.add(pickGesture);
 			
-		JLabel pressKeys = new CenteredText("press arrow keys", 18, Font.BOLD);
-		pressKeys.setBounds(107, 135, 170, 44);
+		JLabel pressKeys = new CenteredText("PRESS AN ARROW KEY", 18, Font.BOLD);
+		pressKeys.setBounds(0, 135, 370, 30);
 		this.add(pressKeys);
 	}
 }

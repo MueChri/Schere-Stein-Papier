@@ -73,7 +73,6 @@ public class GameState {
 			return;
 		}
 		this.pickedGesturePlayer = gesture;
-		System.out.println("Player picked " + this.pickedGesturePlayer);
 	}
 	
 	public Gesture getGesturePlayer() {
@@ -85,7 +84,6 @@ public class GameState {
 			return;
 		}
 		this.pickedGestureOpponent = this.getRandomGesture();
-		System.out.println("Opponent picked " + this.pickedGestureOpponent);
 	}
 	
 	public Gesture getGestureOpponent() {

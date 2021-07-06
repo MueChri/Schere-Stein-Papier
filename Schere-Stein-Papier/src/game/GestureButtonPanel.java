@@ -11,30 +11,33 @@ import common.CenteredText;
 
 public class GestureButtonPanel extends JPanel {
 	
-	private final Gesture type;
 	private final String arrow;
 	private final String image;
 	private final int xPosition;
 	
 	public GestureButtonPanel(Gesture type) {
-		this.type = type;
 		this.arrow = this.getGestureArrow(type);
 		this.image = this.getGestureImage(type);
 		this.xPosition = this.getXPosition(type);
 
-		this.setSize(80, 140);
+		this.setLayout(null);
+		this.setSize(120, 170);
 		this.setLocation(this.xPosition, 210);
 		this.setOpaque(false);
 		
-		JLabel continueLabel = new CenteredText(this.arrow, 32, Font.BOLD);
-		continueLabel.setBounds(0, 0, 60, 120);
-		this.add(continueLabel);
-	}
+		JLabel arrow = new CenteredText(this.arrow, 48, Font.BOLD);
+		arrow.setBounds(0, 0, 120, 50);
+		this.add(arrow);
+
+		JLabel name = new CenteredText("" + type, 18, Font.BOLD);
+		name.setBounds(0, 150, 120, 20);
+		this.add(name);
+}
 	
 	protected void paintComponent(Graphics graphics) {
 		super.paintComponent(graphics);
 		ImageIcon icon = new ImageIcon(this.image);
-		graphics.drawImage(icon.getImage(), 0, 60, 80, 80, this);
+		graphics.drawImage(icon.getImage(), 20, 60, 80, 80, this);
 	}
 	
 
@@ -53,24 +56,24 @@ public class GestureButtonPanel extends JPanel {
 	private String getGestureImage(Gesture type) {
 		switch(type) {
 		case ROCK:
-			return "images/RockGesture.png";
+			return "src/images/RockGesture.png";
 		case PAPER:
-			return "images/PaperGesture.png";
+			return "src/images/PaperGesture.png";
 		case SCISSORS:
 		default:
-			return "images/ScissorsGesture.png";
+			return "src/images/ScissorsGesture.png";
 		}
 	}
 	
 	private int getXPosition(Gesture type) {
 		switch (type) {
 		case ROCK:
-			return 30;
+			return 5;
 		case PAPER:
-			return 145;
+			return 125;
 		case SCISSORS:
 		default:
-			return 260;
+			return 245;
 		}
 	}
 	

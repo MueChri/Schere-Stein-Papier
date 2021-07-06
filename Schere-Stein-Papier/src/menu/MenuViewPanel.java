@@ -15,7 +15,7 @@ public class MenuViewPanel extends ViewPanel {
 		this.add(new InfoButtonPanel());
 
 		JLabel menuLabel = new CenteredText("MAIN MENU", 29, Font.BOLD);
-		menuLabel.setBounds(4, 39, 373, 36);
+		menuLabel.setBounds(0, 40, 370, 35);
 		this.add(menuLabel);
 	
 		this.addKeyListener(new MenuViewPanelKeyListener());

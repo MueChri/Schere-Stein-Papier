@@ -16,7 +16,7 @@ public class HomeButtonPanel extends JPanel {
 	
 	protected void paintComponent(Graphics graphics) {
 		super.paintComponent(graphics);
-		ImageIcon icon = new ImageIcon("images/HomeButton.png");
+		ImageIcon icon = new ImageIcon("src/images/HomeButton.png");
 		graphics.drawImage(icon.getImage(), 0, 0, this);
 	}
 }

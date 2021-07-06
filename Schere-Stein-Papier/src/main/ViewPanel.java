@@ -20,7 +20,7 @@ public abstract class ViewPanel extends JPanel {
 	protected void paintComponent(Graphics graphics) {
 		super.paintComponent(graphics);
 		this.requestFocusInWindow(); // this allows to catch key events in the panel
-		graphics.drawImage(new ImageIcon("images/backgroundProject.png").getImage(), 0, 0, this);
+		graphics.drawImage(new ImageIcon("src/images/backgroundProject.png").getImage(), 0, 0, this);
 	}
 
 	
