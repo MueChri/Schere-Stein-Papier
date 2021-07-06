@@ -11,9 +11,9 @@ public class SchereSteinPapier {
 		Connection dbConnection = OracleDsSingleton.getInstance().getConnection();
 		
 		Runtime.getRuntime().addShutdownHook(new Thread() {
-		    @Override
-		    public void run() {
-		        try {
+			@Override
+			public void run() {
+				try {
 					dbConnection.close();
 				} catch (SQLException error) {
 					error.printStackTrace();
