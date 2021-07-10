@@ -29,7 +29,6 @@ public class GameViewPanel extends ViewPanel {
 		this.addKeyListener(new GameViewPanelKeyListener());
 
 		this.showPlayerGestureSelection();
-		// this.showGameResult();
 	}
 	
 	public void showPlayerGestureSelection() {

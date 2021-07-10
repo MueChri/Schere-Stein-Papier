@@ -15,8 +15,4 @@ public class Highscore {
 		this.roundsWon = roundsWon;
 		this.roundsDraw = roundsDraw;
 	}
-	
-	public String toString() {
-		return this.name + ", " + this.time + ", " + this.roundsWon + ", " + this.roundsDraw; 
-	}
 }

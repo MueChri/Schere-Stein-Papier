@@ -86,7 +86,7 @@ public class GameStepGameResultPanel extends JPanel {
 		GameState gameState = ((GameViewPanel) getParent()).gameState;
 		String playerName = ((MainFrame) SwingUtilities.windowForComponent(this)).playerName;
 		
-		if (this.textfield.getText() != "") {
+		if (this.textfield.getText() == "") {
 			this.textfield.setText(playerName);
 		}
 

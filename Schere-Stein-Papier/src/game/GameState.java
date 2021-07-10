@@ -16,25 +16,10 @@ public class GameState {
 	private int roundsDraw = 0;
 	
 	public final int maxRounds = 10;
+
 	
-	public GameState() {
+	public GameState() { // Konstruktor
 		this.resetGameState();
-	}
-	
-	public int getRoundsCounted() {
-		return this.roundsWon + this.roundsLost + this.roundsDraw;
-	}
-	
-	public int getRoundsWon() {
-		return this.roundsWon;
-	}
-	
-	public int getRoundsLost() {
-		return this.roundsLost;
-	}
-	
-	public int getRoundsDraw() {
-		return this.roundsDraw;
 	}
 	
 	public void resetGameState() {
@@ -54,6 +39,23 @@ public class GameState {
 		this.pickedGestureOpponent = null;
 		this.roundCounted = false;
 		this.currentRound = this.currentRound < this.maxRounds ? this.currentRound + 1 : this.maxRounds;
+	}
+	
+
+	public int getRoundsCounted() {
+		return this.roundsWon + this.roundsLost + this.roundsDraw;
+	}
+	
+	public int getRoundsWon() {
+		return this.roundsWon;
+	}
+	
+	public int getRoundsLost() {
+		return this.roundsLost;
+	}
+	
+	public int getRoundsDraw() {
+		return this.roundsDraw;
 	}
 	
 	public void closeGame() {
@@ -85,11 +87,25 @@ public class GameState {
 		}
 		this.pickedGestureOpponent = this.getRandomGesture();
 	}
-	
+		
+	private Gesture getRandomGesture() {
+		Gesture[] gestures = {Gesture.ROCK, Gesture.PAPER, Gesture.SCISSORS};
+		int random = new Random().nextInt(gestures.length);
+		return gestures[random];
+	}
+
 	public Gesture getGestureOpponent() {
 		return this.pickedGestureOpponent;
 	}
-	
+
+	public GameRoundResult getLastResult() {
+		return this.lastResult;
+	}
+
+	private boolean hasMaxRoundsPlayed() {
+		return this.getRoundsCounted() >= this.maxRounds;
+	}
+
 	public void countRound() {
 		if (this.roundCounted || this.hasMaxRoundsPlayed()) {
 			return;
@@ -105,14 +121,7 @@ public class GameState {
 		this.lastResult = result;
 		this.roundCounted = true;
 	}
-	
-	public GameRoundResult getLastResult() {
-		return this.lastResult;
-	}
 
-	private boolean hasMaxRoundsPlayed() {
-		return this.getRoundsCounted() >= this.maxRounds;
-	}
 	
 	private GameRoundResult getRoundResult() {
 		if (this.pickedGesturePlayer == Gesture.ROCK) {
@@ -140,12 +149,6 @@ public class GameState {
 				return GameRoundResult.DRAW;
 			}
 		}
-	}
-	
-	private Gesture getRandomGesture() {
-		Gesture[] gestures = {Gesture.ROCK, Gesture.PAPER, Gesture.SCISSORS};
-		int random = new Random().nextInt(gestures.length);
-		return gestures[random];
 	}
 	
 }
