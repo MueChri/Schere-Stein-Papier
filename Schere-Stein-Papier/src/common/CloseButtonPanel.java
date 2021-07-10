@@ -16,7 +16,7 @@ public class CloseButtonPanel extends JPanel {
 	
 	protected void paintComponent(Graphics graphics) {
 		super.paintComponent(graphics);
-		ImageIcon icon = new ImageIcon("src/images/closeButton.png");
+		ImageIcon icon = new ImageIcon(getClass().getResource("/closeButton.png"));
 		graphics.drawImage(icon.getImage(), 0, 0, this);
 	}
 		

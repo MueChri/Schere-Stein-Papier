@@ -27,7 +27,7 @@ public class WelcomeViewPanel extends ViewPanel {
 	
 	protected void paintComponent(Graphics graphics) {
 		super.paintComponent(graphics);
-		graphics.drawImage(new ImageIcon("src/images/Welcometransparent.png").getImage(),-11,119,404,262,this);
+		graphics.drawImage(new ImageIcon(getClass().getResource("/Welcometransparent.png")).getImage(),-11,119,404,262,this);
 	}
 
 }

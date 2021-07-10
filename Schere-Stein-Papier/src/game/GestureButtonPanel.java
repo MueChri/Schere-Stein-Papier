@@ -36,7 +36,7 @@ public class GestureButtonPanel extends JPanel {
 	
 	protected void paintComponent(Graphics graphics) {
 		super.paintComponent(graphics);
-		ImageIcon icon = new ImageIcon(this.image);
+		ImageIcon icon = new ImageIcon(getClass().getResource(this.image));
 		graphics.drawImage(icon.getImage(), 20, 60, 80, 80, this);
 	}
 	
@@ -56,12 +56,12 @@ public class GestureButtonPanel extends JPanel {
 	private String getGestureImage(Gesture type) {
 		switch(type) {
 		case ROCK:
-			return "src/images/RockGesture.png";
+			return "/RockGesture.png";
 		case PAPER:
-			return "src/images/PaperGesture.png";
+			return "/PaperGesture.png";
 		case SCISSORS:
 		default:
-			return "src/images/ScissorsGesture.png";
+			return "/ScissorsGesture.png";
 		}
 	}
 	

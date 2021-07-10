@@ -15,7 +15,7 @@ public class InfoButtonPanel extends JPanel {
 	
 	protected void paintComponent(Graphics graphics) {
 		super.paintComponent(graphics);
-		graphics.drawImage(new ImageIcon("src/images/infoButton.png").getImage(), 0, 0, this);
+		graphics.drawImage(new ImageIcon(getClass().getResource("/infoButton.png")).getImage(), 0, 0, this);
 	}
 
 	

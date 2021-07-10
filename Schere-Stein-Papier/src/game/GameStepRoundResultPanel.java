@@ -44,40 +44,40 @@ public class GameStepRoundResultPanel  extends JPanel {
     	GameRoundResult result = gameState.getLastResult();
 
     	if (result == GameRoundResult.WON) {
-    		resultImagePath = "src/images/YouWon.png";
+    		resultImagePath = "/YouWon.png";
     	} else if (result == GameRoundResult.LOST) {
-    		resultImagePath = "src/images/YouLost.png";
+    		resultImagePath = "/YouLost.png";
     	} else {
-    		resultImagePath = "src/images/DrawGame.png";
+    		resultImagePath = "/DrawGame.png";
     	}
 
     	if (gameState.getGesturePlayer() == Gesture.ROCK) {
-    		playerPickImagePath = "src/images/RockGesture2.png";
+    		playerPickImagePath = "/RockGesture2.png";
     	} else if (gameState.getGesturePlayer() == Gesture.PAPER) {
-    		playerPickImagePath = "src/images/PaperGesture2.png";
+    		playerPickImagePath = "/PaperGesture2.png";
     	} else {
-    		playerPickImagePath = "src/images/ScissorsGesture2.png";
+    		playerPickImagePath = "/ScissorsGesture2.png";
     	}
 
     	if (gameState.getGestureOpponent() == Gesture.ROCK) {
-    		opponentPickImagePath = "src/images/RockGesture2.png";
+    		opponentPickImagePath = "/RockGesture2.png";
     	} else if (gameState.getGestureOpponent() == Gesture.PAPER) {
-    		opponentPickImagePath = "src/images/PaperGesture2.png";
+    		opponentPickImagePath = "/PaperGesture2.png";
     	} else {
-    		opponentPickImagePath = "src/images/ScissorsGesture2.png";
+    		opponentPickImagePath = "/ScissorsGesture2.png";
     	}
 
     	this.textPlayerPicked.setText("<html><center>YOU<br>PICKED<br>" + gameState.getGesturePlayer() + "</center></html>");
 		this.textOpponentPicked.setText("<html><center>OPPONENT<br>PICKED<br>" + gameState.getGestureOpponent() + "</center></html>");
 		this.textContinue.setText("PRESS ENTER " + (gameState.getRoundsCounted() < gameState.maxRounds ? "FOR NEXT ROUND" : "TO FINISH GAME"));
 
-		ImageIcon icon = new ImageIcon(resultImagePath);
+		ImageIcon icon = new ImageIcon(getClass().getResource(resultImagePath));
 		graphics.drawImage(icon.getImage(), 10, 170, this);
 
-		ImageIcon playerImage = new ImageIcon(playerPickImagePath);
+		ImageIcon playerImage = new ImageIcon(getClass().getResource(playerPickImagePath));
 		graphics.drawImage(playerImage.getImage(), 53, 90, 80, 80, this);
 		
-		ImageIcon opponentImage = new ImageIcon(opponentPickImagePath);
+		ImageIcon opponentImage = new ImageIcon(getClass().getResource(opponentPickImagePath));
 		graphics.drawImage(opponentImage.getImage(), 238, 90, 80, 80, this);
 	}
 }
